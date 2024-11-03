@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Efek hover pada baris */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Warna latar belakang untuk baris ganjil */
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Mengubah tabel menjadi block untuk tampilan responsif */
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        content: attr(data-label); /* Menambahkan label untuk setiap data */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
